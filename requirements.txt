@@ -1,0 +1,20 @@
+# Invoice Processing Pipeline — Python Dependencies
+#
+# Install with:  pip install -r requirements.txt
+#
+# Versions are pinned to the minor level (e.g. >=1.6,<2) to stay compatible
+# without locking to a specific patch release.
+
+# --- Step 1: Download ---
+imap-tools>=1.6,<2          # IMAP email scanning and attachment handling
+DrissionPage>=4.0,<5        # Browser automation via Chromium (CDP)
+
+# --- Step 2: Extract & Rename ---
+pdfplumber>=0.11,<1         # Primary PDF text extraction
+PyMuPDF>=1.24,<2            # Fallback text extraction + page rasterisation for OCR
+easyocr>=1.7,<2             # OCR for scanned / image-based invoices
+pandas>=2.0,<3              # Excel lookup tables (suppliers, locations)
+openpyxl>=3.1,<4            # pandas backend for reading .xlsx files
+
+# --- Shared ---
+python-dotenv>=1.0,<2       # Loads .env into os.environ at startup
