@@ -1,0 +1,47 @@
+# =============================================================================
+# Invoice Pipeline — .gitignore
+# =============================================================================
+
+# --- Credentials & local config (NEVER commit these) ---
+.env
+
+# --- Invoice data (local only — can contain real supplier documents) ---
+invoices/
+organized/
+
+# --- Lookup tables (contain real supplier/location data) ---
+suppliers.xlsx
+locations.xlsx
+trusted_emails.txt
+
+# --- Computer vision artefacts ---
+cv_screenshot.png
+cv_template.png
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.iml
+
+# --- OS artefacts ---
+.DS_Store
+Thumbs.db
+desktop.ini
